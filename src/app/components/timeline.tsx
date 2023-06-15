@@ -45,6 +45,7 @@ function Timeline() {
   return (
     <section className="timeline">
       <ul>
+        {/* //TODO: Convertir en ejercicio para probar Maquetadores */}
         <li ref={addToRefs}>
           {''}
           <div>
