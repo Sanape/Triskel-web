@@ -35,7 +35,7 @@ export default function Navbar() {
         TiskelTech +CreActivos
       </Link>
 
-      <div className="space-x-4 justify-between flex w-6">
+      <div className="space-x-4 justify-between flex ">
         <div className={'links'}>
           <Link
             href="/link1"
