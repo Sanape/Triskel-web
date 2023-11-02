@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import Logo from '../../public/img/logo-triskel limpio.png';
+import Logo from '@/../public/img/logo triskel.svg';
 import Link from 'next/link';
 import Timeline from './components/timeline';
+import {Cursos} from '@/app/data.js'
 
 export default function Home() {
   return (
@@ -25,74 +26,33 @@ export default function Home() {
       </section>
 
       <section className="course-section p-24">
-        <div className="card">
+       {Cursos.map(curso =>{
+        return (
+        <div className="card"  key={curso.id}>
           <div className="card-image">
-            <Image src={Logo} alt="TriskelTech Logo" className="object-cover" />
+            <Image src={Logo}  className="object-cover" alt={curso.name} width={300} height={300}/>
           </div>
           <div className="card-content">
-            <h3>Card Title 1</h3>
-            <p className="card-description px-4 py-1 m-2">
-              Card description goes here.
+            <h3 className="course-title">{curso.name}</h3>
+            <div className='px-4 py-1 m-2 card-description'>
+            <p  id='profesor'>
+            {curso.profesor}
             </p>
+            {/* {curso.hourStart.map((hour)=>return()
+            )} */}
+            <p className=''>{curso.hourStart}</p>
+            </div>
             <Link
-              href="/button-link"
+              href={`/curso/${curso.id}`}
               className="btn px-4 py-1 bg-white text-white rounded  "
             >
               Descubrir más
             </Link>
           </div>
         </div>
-        <div className="card">
-          <div className="card-image">
-            <Image src={Logo} alt="TriskelTech Logo" className="object-cover" />
-          </div>
-          <div className="card-content">
-            <h3>Card Title 1</h3>
-            <p className="card-description px-4 py-1 m-2">
-              Card description goes here.
-            </p>
-            <Link
-              href="/button-link"
-              className="btn px-4 py-1 bg-white text-white rounded  "
-            >
-              Descubrir más
-            </Link>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-image">
-            <Image src={Logo} alt="TriskelTech Logo" className="object-cover" />
-          </div>
-          <div className="card-content">
-            <h3>Card Title 1</h3>
-            <p className="card-description px-4 py-1 m-2">
-              Card description goes here.
-            </p>
-            <Link
-              href="/button-link"
-              className="btn px-4 py-1 bg-white text-white rounded  "
-            >
-              Descubrir más
-            </Link>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-image">
-            <Image src={Logo} alt="TriskelTech Logo" className="object-cover" />
-          </div>
-          <div className="card-content">
-            <h3>Card Title 1</h3>
-            <p className="card-description px-4 py-1 m-2">
-              Card description goes here.
-            </p>
-            <Link
-              href="/button-link"
-              className="btn px-4 py-1 bg-white text-white rounded  "
-            >
-              Descubrir más
-            </Link>
-          </div>
-        </div>
+        )
+       })}
+       
       </section>
     </main>
   );

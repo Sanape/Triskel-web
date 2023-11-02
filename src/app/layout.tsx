@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ess">
+    <html lang="es">
       <body className={inter.className}>
         <header className="top-0 sticky  ">
           <Navbar></Navbar>

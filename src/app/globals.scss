@@ -56,7 +56,7 @@ $text-color: #3c3f64;
         width: 800px;
         padding: 20px;
         background: $primary-color;
-        box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+        box-shadow: 4px 6px 30px 1px rgba(252, 56, 56, 0.1);
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -116,7 +116,7 @@ $text-color: #3c3f64;
       }
       &:nth-of-type(even) {
         > div {
-          left: -845px;
+          left: -742px;
         }
       }
     }
@@ -153,6 +153,19 @@ $text-color: #3c3f64;
   }
 }
 
+
+@media screen and (min-width: 1500px) {
+  .timeline {
+    ul {
+      li {
+        div {
+          width: 712px;
+         
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 900px) {
   .timeline {
     ul {
@@ -174,7 +187,6 @@ $text-color: #3c3f64;
     }
   }
 }
-
 @media screen and (max-width: 600px) {
   .timeline {
     ul {
@@ -239,7 +251,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
   }
 }
 nav .btn {
@@ -330,4 +342,18 @@ nav .btn {
   font-size: inherit;
   margin-left: auto;
   margin-right: 5%;
+}
+
+.card .card-content{
+  h3{
+
+    font-size: 1.5rem;
+  }
+  .card-description{
+
+    #profesor{
+
+      font-size: 1.25rem;
+    }
+  }
 }
