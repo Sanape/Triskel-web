@@ -47,7 +47,7 @@ export default function Navbar() {
             Inicio
           </Link>
           <Link href="/link2" className="link text-black ">
-            Nuestra metología
+            Metología
           </Link>
           <Link href="/link3" className="link text-black ">
             Cursos

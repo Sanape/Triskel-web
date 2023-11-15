@@ -7,11 +7,12 @@ import {Cursos} from '@/app/data.js'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-6">
-      <section className="banner-section">
-        <div className="image-container">
-          <Image src={Logo} alt="TriskelTech Logo" className="object-cover" />
-        </div>
+      <section className="banner-section" >
+        <Image src={Logo} alt="TriskelTech Logo" className="banner-image"/>
         <h1>TiskelTech +CreActivos</h1>
+      </section>
+
+      <section className="steam-section">
         <Image
           src={'/img/Educacion-STEAM.png'}
           alt="STEAM Logo"
@@ -19,9 +20,6 @@ export default function Home() {
           width="600"
           height="600"
         />
-      </section>
-
-      <section className="steam-section">
         <Timeline></Timeline>
       </section>
 
@@ -34,13 +32,21 @@ export default function Home() {
           </div>
           <div className="card-content">
             <h3 className="course-title">{curso.name}</h3>
-            <div className='px-4 py-1 m-2 card-description'>
+            <div className='px-4 py-1 m-2 card-description '>
             <p  id='profesor'>
             {curso.profesor}
             </p>
-            {/* {curso.hourStart.map((hour)=>return()
-            )} */}
-            <p className=''>{curso.hourStart}</p>
+            <div className='flex'>
+              {curso.classes.map((curso, i) =>{
+                return(
+                  <div key={i} className='m-1'>
+                    <p>{curso.day}</p>
+                    <p>{curso.hourStart}</p>
+                    <p>{curso.hourEnd}</p>
+                  </div>
+                )
+              })}
+            </div>
             </div>
             <Link
               href={`/curso/${curso.id}`}
