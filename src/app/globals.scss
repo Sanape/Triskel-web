@@ -227,6 +227,7 @@ section {
 .btn {
   width: 150px;
   background-color: #d19c1d;
+  //hsl(172.62,100%,38.24%),hsl(218.55,82.13%,46.08%),hsl(73.54,74.55%,43.14%),hsl(341.03,79.09%,56.86%),hsl(278.95,86.43%,43.33%)
   &:hover {
     background-color: #dea51f;
   }
@@ -343,12 +344,10 @@ animation: spinAndScale 2s,fadeIn 2s;
   align-items: center;
   flex-direction: row;
   margin: 20px 10px;
-  border: 3px solid #d19c1d;
+  //border: 3px solid #d19c1d;
   border-radius: 5px;
   //background-color: rgba(255, 5, 225, 0.5);
-  box-shadow: -1px 4px 10px -1px rgba(0, 0, 0, 0.51);
-  -webkit-box-shadow: -1px 4px 10px -1px rgba(0, 0, 0, 0.51);
-  -moz-box-shadow: -1px 4px 10px -1px rgba(0, 0, 0, 0.51);
+  box-shadow: 4px 6px 30px 1px rgba(252, 56, 56, 0.1);
 }
 
 .course-section .card .card-content {

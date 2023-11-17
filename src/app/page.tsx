@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from '@/../public/img/logo triskel.svg';
+import Logo from '@/../public/img/logo triskel alt.svg';
 import Link from 'next/link';
 import Timeline from './components/timeline';
 import {Cursos} from '@/app/data.js'
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className="card-content">
             <h3 className="course-title">{curso.name}</h3>
-            <div className='px-4 py-1 m-2 card-description '>
+            <div className='px-4 py-2 m-2 card-description '>
             <p  id='profesor'>
             {curso.profesor}
             </p>
@@ -40,9 +40,12 @@ export default function Home() {
               {curso.classes.map((curso, i) =>{
                 return(
                   <div key={i} className='m-1'>
-                    <p>{curso.day}</p>
+                    <p>{curso.day? curso.day:'\u00a0'}</p>
+                    <div className='flex'>
                     <p>{curso.hourStart}</p>
+                    <p className='mx-1'>a</p>
                     <p>{curso.hourEnd}</p>
+                    </div>
                   </div>
                 )
               })}
@@ -50,7 +53,7 @@ export default function Home() {
             </div>
             <Link
               href={`/curso/${curso.id}`}
-              className="btn px-4 py-1 bg-white text-white rounded  "
+              className="btn px-4 py- bg-white text-white rounded  "
             >
               Descubrir más
             </Link>
