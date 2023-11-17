@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className="card-content">
             <h3 className="course-title">{curso.name}</h3>
-            <div className='px-4 py-2 m-2 card-description '>
+            <div className='px-4 py-1 m-2 card-description '>
             <p  id='profesor'>
             {curso.profesor}
             </p>
@@ -53,7 +53,7 @@ export default function Home() {
             </div>
             <Link
               href={`/curso/${curso.id}`}
-              className="btn px-4 py- bg-white text-white rounded  "
+              className="btn px-4 py-2 bg-white text-white rounded"
             >
               Descubrir más
             </Link>
