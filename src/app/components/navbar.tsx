@@ -35,8 +35,8 @@ export default function Navbar() {
         TiskelTech +CreActivos
       </Link>
 
-      <div className="space-x-4 justify-between flex ">
-        <div className={'links'}>
+      <div className="space-x-4 justify-between flex">
+        <div className='links justify-between'>
           <Link
             href="/link1"
             className="link text-black "
@@ -47,7 +47,7 @@ export default function Navbar() {
             Inicio
           </Link>
           <Link href="/link2" className="link text-black ">
-            Nuestra metología
+            Metología
           </Link>
           <Link href="/link3" className="link text-black ">
             Cursos

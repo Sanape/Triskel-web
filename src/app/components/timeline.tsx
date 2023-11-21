@@ -61,13 +61,20 @@ function Timeline() {
               ></Image>
             </div>
             <div className="scientist">
-              <span>
+              {/* <span>
                 Desempeña un papel vital en la metodología STEAM ya que es la
                 base para comprender el mundo que nos rodea. La ciencia nos
                 proporciona el conocimiento y la comprensión de los fenómenos
                 naturales y de cómo funciona el universo, desde los principios
                 fundamentales de la física hasta la complejidad de los sistemas
                 biológicos. Con una base sólida en ciencia, los estudiantes
+                pueden desarrollar un pensamiento crítico y analítico que les
+                permitirá entender y resolver problemas complejos, fomentando
+                así su creatividad e innovación en áreas científicas y
+                tecnológicas.
+              </span> */}
+              <span>
+                Con una base sólida en ciencia, los estudiantes
                 pueden desarrollar un pensamiento crítico y analítico que les
                 permitirá entender y resolver problemas complejos, fomentando
                 así su creatividad e innovación en áreas científicas y
@@ -92,12 +99,12 @@ function Timeline() {
             </div>
             <div className="scientist">
               <span>
-                Crucial en la educación ya que es una herramienta que permite
+                {/* Crucial en la educación ya que es una herramienta que permite
                 implementar y aplicar los conocimientos adquiridos en ciencia.
                 La tecnología también ofrece nuevas formas de aprender, enseñar
                 y comunicarse, proporcionando un acceso sin precedentes a la
-                información y a las oportunidades de aprendizaje. Al dominar las
-                habilidades tecnológicas, los estudiantes pueden adaptarse a un
+                información y a las oportunidades de aprendizaje.  */}
+                Al dominar las habilidades tecnológicas, los estudiantes pueden adaptarse a un
                 mundo que está en constante cambio y en el que la tecnología
                 juega un papel cada vez más importante.
               </span>
@@ -124,11 +131,12 @@ function Timeline() {
                 habilidades necesario para diseñar y construir soluciones a
                 problemas reales. La ingeniería combina los principios de la
                 ciencia y la matemática con la práctica de diseño para crear
-                soluciones innovadoras. Al aprender sobre ingeniería, los
+                soluciones innovadoras. 
+                {/* Al aprender sobre ingeniería, los
                 estudiantes no solo adquieren habilidades técnicas, sino que
                 también desarrollan habilidades de pensamiento crítico,
                 resolución de problemas y trabajo en equipo que son esenciales
-                en el siglo XXI.
+                en el siglo XXI. */}
               </span>
             </div>
           </div>
@@ -148,16 +156,11 @@ function Timeline() {
               ></Image>
             </div>
             <div className="scientist">
-              <span>
-                Componente clave de la educación STEAM, ya que fomentan la
-                creatividad, la expresión personal y la innovación. Las artes
-                pueden ayudar a los estudiantes a ver las cosas desde diferentes
+              <span> 
+                La expresión artistica ayuda a los estudiantes a ver las cosas desde diferentes
                 perspectivas, a pensar fuera de la caja y a encontrar soluciones
-                creativas a los problemas. Además, las artes pueden mejorar la
-                motivación, el compromiso y el disfrute del aprendizaje, y
-                pueden proporcionar una forma de conectar la ciencia, la
-                tecnología, la ingeniería y las matemáticas con las experiencias
-                de vida de los estudiantes.
+                creativas a los problemas además de mejorar el aprendizaje a través de
+                sus propias experiencias
               </span>
             </div>
           </div>
@@ -178,9 +181,7 @@ function Timeline() {
             </div>
             <div className="scientist">
               <span>
-                Fundamentales en la educación STEAM ya que son la base para
-                entender y aplicar conceptos científicos y tecnológicos. Las
-                matemáticas ayudan a los estudiantes a desarrollar habilidades
+                Las matemáticas ayudan a los estudiantes a desarrollar habilidades
                 de pensamiento lógico y crítico, a resolver problemas y a tomar
                 decisiones basadas en datos. Además, el dominio de las
                 matemáticas es esencial para muchas carreras en ciencia,
@@ -189,7 +190,6 @@ function Timeline() {
             </div>
           </div>
         </li>
-        {/* more li elements */}
       </ul>
     </section>
   );

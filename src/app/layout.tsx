@@ -22,8 +22,8 @@ export default function RootLayout({
           <Navbar></Navbar>
         </header>
         {children}
-        <footer>
-          <ul className="social-media-links">
+        <footer className='flex column'>
+          <ul className="social-media-links ">
             <li>
               <Link href="#">WhatsApp</Link>
             </li>
