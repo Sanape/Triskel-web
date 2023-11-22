@@ -1,23 +1,25 @@
 'use client'
 
 import Image from 'next/image';
-import Logo from '@/../public/img/logo triskel alt.svg';
+import Logo from '@/../public/img/logo triskel naranja.svg';
 import Link from 'next/link';
 import Timeline from './components/timeline';
 import {Cursos} from '@/app/data.js'
 import { useState } from 'react';
 
 export default function Home() {
-  const [animate, setAnimate] = useState(true);
+  const [animate, setAnimate] = useState(false);
+  const [reload, setReload] = useState(true);
 
   const handleClick = () => {
     setAnimate(!animate);
+    setReload(false);
    };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-6">
       <section className="banner-section" >
-        <Image src={Logo} alt="TriskelTech Logo" className={`banner-image ${animate ? 'animate' : ''}`} onClick={handleClick}/>
+        <Image src={Logo} alt="TriskelTech Logo" className={`banner-image ${reload ? 'reload' : ''} ${animate ? 'animate' : ''}`} onClick={handleClick}/>
         <h1>TiskelTech +CreActivos</h1>
       </section>
 

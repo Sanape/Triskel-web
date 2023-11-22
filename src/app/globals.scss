@@ -283,14 +283,28 @@ nav .btn {
 }
 
 @keyframes spinAndScale {
+
+  from { transform: scale(0) rotate(0deg); }
+  to { transform: scale(1) rotate(360deg); }
+}
+
+@keyframes scale {
+
+  0% { transform: scale(1) rotate(0deg); }
+  25%{ transform: scale(0.95) rotate(-45deg);}
+  75%{ transform:  scale(0.95) rotate(45deg);}
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-  // from { transform: scale(0) rotate(0deg); }
-  // to { transform: scale(1) rotate(360deg); }
+
 }
 main {
   overflow: hidden;
@@ -309,10 +323,17 @@ main {
   width: 90%;
   margin: auto;
 }
+.banner-image:hover{
+  cursor: pointer;
+  transform: scale(1.01);
+  animation: scale 2S;
+}
+.banner-image.reload{
+  animation: spinAndScale 2s, fadeIn 2s;
+}
 
 .banner-image.animate {
-  // animation: spinAndScale 2s,fadeIn 2s;
-  animation: spinAndScale 2s;
+  animation: spin 2s;
 }
 
 .banner-section h1 {
