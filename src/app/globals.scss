@@ -272,6 +272,9 @@ nav .btn {
   color: #dea51f;
   transform: scale(1.1);
 }
+main {
+  overflow: hidden;
+}
 
 @keyframes fadeIn {
   from {
@@ -288,7 +291,7 @@ nav .btn {
   to { transform: scale(1) rotate(360deg); }
 }
 
-@keyframes scale {
+@keyframes hover {
 
   0% { transform: scale(1) rotate(0deg); }
   25%{ transform: scale(0.95) rotate(-45deg);}
@@ -297,17 +300,21 @@ nav .btn {
 }
 
 
-@keyframes spin {
+@keyframes spinforward {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-
 }
-main {
-  overflow: hidden;
+@keyframes spinbackward {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 .banner-section {
   display: flex;
@@ -316,24 +323,33 @@ main {
   align-items: center;
   flex-direction: column;
   height: 90vh;
+  width: 100vw;
 }
 
 .banner-image {
   height: 80%;
   width: 90%;
   margin: auto;
+  & img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
-.banner-image:hover{
+.banner-image:hover
+{
   cursor: pointer;
-  transform: scale(1.01);
-  animation: scale 2S;
+  animation: hover 2S;
 }
 .banner-image.reload{
   animation: spinAndScale 2s, fadeIn 2s;
 }
 
 .banner-image.animate {
-  animation: spin 2s;
+  animation: spinforward 2s;
+}
+.banner-image.spinback {
+  animation: spinbackward 2s;
 }
 
 .banner-section h1 {

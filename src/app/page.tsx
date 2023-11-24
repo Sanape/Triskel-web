@@ -5,23 +5,53 @@ import Logo from '@/../public/img/logo triskel naranja.svg';
 import Link from 'next/link';
 import Timeline from './components/timeline';
 import {Cursos} from '@/app/data.js'
-import { useState } from 'react';
+import { useState, useRef, useEffect} from 'react';
 
 export default function Home() {
   const [animate, setAnimate] = useState(false);
   const [reload, setReload] = useState(true);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
-    setAnimate(!animate);
+    setAnimate(true);
     setReload(false);
+    if (imageRef.current) {
+      imageRef.current.classList.add('animate');
+      setTimeout(() => {
+        if (imageRef.current) {
+          imageRef.current.classList.remove('animate');
+        }
+      }, 2000); // 2000ms is the duration of the spin animation
+    }
+  };
+
+  const handleMouseOut = () => {
+    if (imageRef.current) {
+      imageRef.current.classList.add('spinback');
+      setTimeout(() => {
+        if (imageRef.current) {
+          imageRef.current.classList.remove('spinback');
+        }
+      }, 2000); // 2000ms is the duration of the spin animation
+    }
    };
+
+  useEffect(() => {
+      setTimeout(() => {
+        if (imageRef.current) {
+          imageRef.current.classList.remove('reload');
+        }
+      }, 2000); // 2000ms is the delay before the class is removed
+   }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-6">
-      <section className="banner-section" >
-        <Image src={Logo} alt="TriskelTech Logo" className={`banner-image ${reload ? 'reload' : ''} ${animate ? 'animate' : ''}`} onClick={handleClick}/>
-        <h1>TiskelTech +CreActivos</h1>
-      </section>
+           <section className="banner-section" >
+       <div ref={imageRef} className={`banner-image ${reload ? 'reload' : ''} ${animate ? 'animate' : ''}`}>
+         <Image src={Logo} alt="TriskelTech Logo" onClick={handleClick} onMouseOut={handleMouseOut}/>
+       </div>
+       <h1>TiskelTech +CreActivos</h1>
+     </section>
 
       <section className="steam-section">
         <Image
