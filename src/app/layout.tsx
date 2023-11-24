@@ -24,6 +24,7 @@ export default function RootLayout({
         {children}
         <footer className='flex column'>
           <ul className="social-media-links ">
+            <h4>Nuestras redes sociales</h4>
             <li>
               <Link href="#">WhatsApp</Link>
             </li>
@@ -37,8 +38,16 @@ export default function RootLayout({
               <Link href="#">YouTube</Link>
             </li>
           </ul>
+          <div>
+          <h4>Ubicación</h4>
           <p>Club Mariano Moreno de Castelar</p>
+          </div>
+          <div>
+          <h4>Contactanos</h4>
           <p>triskeltechcreactivos@gmail.com</p>
+          <p>triskeltechcreactivos@gmail.com</p>
+          <p>triskeltechcreactivos@gmail.com</p>
+          </div>
         </footer>
       </body>
     </html>
