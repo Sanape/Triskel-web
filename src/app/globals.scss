@@ -31,6 +31,8 @@ $text-color: #3c3f64;
 
 // STYLING
 .timeline {
+  background-color: #f3f3f3;
+    padding: 10px;
   ul {
     li {
       list-style-type: none;
@@ -44,11 +46,14 @@ $text-color: #3c3f64;
         position: absolute;
         left: 50%;
         bottom: 0;
-        transform: translateX(-50%) rotate(45deg);
-        width: 20px;
-        height: 20px;
+        background-image: url('../../public/img/logo triskel naranja.svg');
+        background-size: cover;
+        transform: translateX(-50%);
+        //clip-path: polygon(25% 0, 80% 0, 100% 50%, 80% 100%, 25% 100%, 0% 50%);
+        width: 45px;
+        height: 40px;
         z-index: 2;
-        background: #464646;
+        //background: #464646;
       }
       div {
         position: relative;
@@ -122,6 +127,26 @@ $text-color: #3c3f64;
     }
   }
 }
+
+.timeline ul li:nth-child(1) {
+  background: #2fa0d0; /* color for time1 */
+ }
+ 
+ .timeline ul li:nth-child(2) {
+  background: #1d6eae; /* color for time2 */
+ }
+ 
+ .timeline ul li:nth-child(3) {
+  background: #459750; /* color for time3 */
+ }
+ 
+ .timeline ul li:nth-child(4) {
+  background: #e03a37; /* color for time4 */
+ }
+ 
+ .timeline ul li:nth-child(5) {
+  background: #ed901d; /* color for time5 */
+ }
 
 // ANIMATION
 .timeline {
@@ -208,7 +233,6 @@ body {
   background: lhsl(255°, 80%, 98%);
   font: normal 16px/1.5 'Titillium Web', sans-serif;
   overflow-x: hidden;
-  padding-bottom: 50px;
 }
 
 header {
@@ -369,7 +393,8 @@ main {
 
 .object-cover {
   margin: auto;
-  height: 60%;
+  height: 75%;
+  // width: 70%;
   width: auto;
   object-fit: cover;
 }
@@ -408,6 +433,7 @@ main {
 }
 .card-image {
   width: 35%;
+  height: 235px;
 }
 
 /* .card .card-content .card-description {
@@ -434,9 +460,18 @@ main {
 
 
 footer{
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
+  padding-top: 20px;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: $primary-color;
   & * {
     margin: 0 auto;
+    & h4{
+      margin-bottom: 10px;
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 }

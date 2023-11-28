@@ -45,7 +45,7 @@ export default function Home() {
    }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-6">
            <section className="banner-section" >
        <div ref={imageRef} className={`banner-image ${reload ? 'reload' : ''} ${animate ? 'animate' : ''}`}>
          <Image src={Logo} alt="TriskelTech Logo" onClick={handleClick} onMouseOut={handleMouseOut}/>
@@ -64,12 +64,12 @@ export default function Home() {
         <Timeline></Timeline>
       </section>
 
-      <section className="course-section p-24">
+      <section className="course-section p-10">
        {Cursos.map(curso =>{
         return (
         <div className="card"  key={curso.id}>
           <div className="card-image">
-            <Image src={Logo}  className="object-cover" alt={curso.name} width={300} height={300}/>
+            <Image src={curso.image}  className="object-cover" alt={curso.name} width={300} height={300}/>
           </div>
           <div className="card-content">
             <h3 className="course-title">{curso.name}</h3>

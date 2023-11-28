@@ -14,7 +14,7 @@ const Cursos = [
             hourEnd: '20:00',
         }
     ],
-        image:'img/clases/programacion/logo.png',
+        image:'/../public/img/vuelta al mundo.jpg',
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const Cursos = [
             hourStart: '16:00',
             hourEnd: '18:00',
         }],
-        image:'img/clases/programacion/logo.png',
+        image:'/../public/img/vuelta al mundo.jpg',
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ const Cursos = [
             hourStart: '18:00',
             hourEnd: '20:00',
         }],
-        image:'img/clases/programacion/logo.png',
+        image:'/../public/img/arduino.jpg',
     },
     {
         id: 4,
@@ -47,7 +47,7 @@ const Cursos = [
             hourStart: '18:00',
             hourEnd: '20:00',
         }],
-        image:'img/clases/programacion/logo.png',
+        image:'/../public/img/programacion.jpg',
     }
 ]
 
